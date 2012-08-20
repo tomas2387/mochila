@@ -1,5 +1,7 @@
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -27,7 +29,17 @@ public class mochilaResolverTest {
 
 	@Test
 	public void testResolver() {
-		fail("Not yet implemented");
+		mochilaResolver mr = new mochilaResolver();
+		
+		ArrayList<item> totalTasks = new ArrayList<item>();
+		totalTasks.add(new item(1, 2));
+		totalTasks.add(new item(10, 3));
+				
+		ArrayList<item> expected = new ArrayList<item>();
+		expected.add(new item(1, 2));
+	
+		assertArrayEquals("Los arrays no son iguales",expected.toArray(), mr.resolver(totalTasks, totalTasks.size(), 9).toArray());
+				
 	}
 
 }

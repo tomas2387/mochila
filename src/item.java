@@ -21,4 +21,18 @@ public class item {
 		this.nivelPrioridad = nivelPrioridad;
 	}
 	
+	@Override
+	public boolean equals(Object obj) {	
+		item b = (item) obj;
+		
+		if(b.getPeso() != this.peso || b.getNivelPrioridad() != this.nivelPrioridad) return false;
+
+		return true;
+	}
+	
+	@Override
+	public String toString() {
+		return "[" + this.peso + "," + this.nivelPrioridad + "]";
+	}
+	
 }
