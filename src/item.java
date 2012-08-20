@@ -1,6 +1,6 @@
 
 public class item {
-	private int peso;
+	private double peso;
 	private int nivelPrioridad;
 	
 	public item(int peso, int nivelPrioridad) {
@@ -8,10 +8,10 @@ public class item {
 		this.nivelPrioridad = nivelPrioridad;
 	}
 	
-	public int getPeso() {
+	public double getPeso() {
 		return peso;
 	}
-	public void setPeso(int peso) {
+	public void setPeso(double peso) {
 		this.peso = peso;
 	}
 	public int getNivelPrioridad() {
